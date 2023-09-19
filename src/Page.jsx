@@ -4,6 +4,7 @@ import FreePlaySettings from "./FreePlaySettings";
 import BattleScreen from "./BattleScreen";
 import ChartModal from "./ChartModal";
 import BlitzScreen from "./BlitzScreen";
+import map from "/assets/map.png";
 export function Page() {
   const [pageContent, setPageContent] = useState("about");
   const [showDialog, setShowDialog] = useState(false);
@@ -50,8 +51,7 @@ export function Page() {
         onClick={() => setShowDialog(true)}
         title="Type Chart"
       >
-        {/* <img src="src/assets/map.png" alt="" /> */}
-        <img src="public/assets/map.png" alt="" />
+        <img src={map} alt="" />
       </button>
       <ChartModal
         dialogRef={dialogRef}

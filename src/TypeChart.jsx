@@ -18,7 +18,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`../public/assets/icons/${type}.png`}
+                src={`/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -32,7 +32,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`../public/assets/icons/${type}.png`}
+                src={`/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -46,7 +46,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`../public/assets/icons/${type}.png`}
+                src={`/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -60,7 +60,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`../public/assets/icons/${type}.png`}
+                src={`/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -74,7 +74,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`../public/assets/icons/${type}.png`}
+                src={`/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -88,7 +88,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`../public/assets/icons/${type}.png`}
+                src={`/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />

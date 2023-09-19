@@ -68,7 +68,7 @@ export default function BlitzScreen({ toAbout }) {
       if (numOfTypes === 1) {
         team.push({
           typeIndex: [allTypes.indexOf(allTypesCopy[0])],
-          image: `../public/assets/sprites/${allTypes.indexOf(
+          image: `/assets/sprites/${allTypes.indexOf(
             allTypesCopy[0]
           )}_${allTypes.indexOf(allTypesCopy[0])}.png`,
           key: crypto.randomUUID(),
@@ -83,7 +83,7 @@ export default function BlitzScreen({ toAbout }) {
         });
         team.push({
           typeIndex: typesChosen,
-          image: `../public/assets/sprites/${typesChosen[0]}_${typesChosen[1]}.png`,
+          image: `/assets/sprites/${typesChosen[0]}_${typesChosen[1]}.png`,
           key: crypto.randomUUID(),
         });
       }
@@ -158,7 +158,7 @@ export default function BlitzScreen({ toAbout }) {
               src={poke.image}
               onError={(e) => {
                 e.preventDefault();
-                e.target.src = "../public/assets/sprites/arceus.png";
+                e.target.src = "/assets/sprites/arceus.png";
               }}
             />
           );
@@ -169,7 +169,6 @@ export default function BlitzScreen({ toAbout }) {
         className="healthbarContainer"
         style={{ outline: `1px solid ${healthbarColor}` }}
       >
-        {/* <p>{healthbar}</p> */}
         <div
           className="healthbar"
           style={{
@@ -209,7 +208,7 @@ export default function BlitzScreen({ toAbout }) {
         )}
       </dialog>
       <button className="back" onClick={toAbout}>
-        <img className="unown-back" src="../public/assets/unown.webp" />
+        <img className="unown-back" src="/assets/unown.webp" />
       </button>
     </>
   );

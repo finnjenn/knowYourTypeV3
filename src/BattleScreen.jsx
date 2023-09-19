@@ -92,7 +92,7 @@ export default function BattleScreen({ toAbout, userTypesRef, oppTypesRef }) {
           setDamageOutput("Your Moves");
         }}
       >
-        <img className="unown-next" src="../public/assets/unown.webp" />
+        <img className="unown-next" src="/assets/unown.webp" />
       </button>
     </>
   );

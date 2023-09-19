@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { allTypes } from "./typeData";
 import TypeChart from "./TypeChart";
+// import icons from "../public/assets/icons";
 export default function ChartModal({ closeDialog, dialogRef }) {
   const [chartContent, setChartContent] = useState("main");
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function ChartModal({ closeDialog, dialogRef }) {
                 >
                   <img
                     className="chartIcon"
-                    src={`../public/assets/icons/${type}.png`}
+                    src={`/assets/icons/${type}.png`}
                     alt={type}
                     title={type}
                   />
@@ -300,7 +301,7 @@ export default function ChartModal({ closeDialog, dialogRef }) {
             setChartContent("main");
           }}
         >
-          <img className="unown-back" src="../public/assets/unown.webp" />
+          <img className="unown-back" src="/assets/unown.webp" />
         </button>
       )}
     </dialog>

@@ -1,4 +1,6 @@
 import Logo from "./Logo";
+import elementalTriangle from "/assets/elemental-triangle.png";
+import typeChart from "/assets/type-chart.webp";
 export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
   return (
     <>
@@ -19,10 +21,7 @@ export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
         <span style={{ color: "#78c850" }}>Grass</span> Elemental Triangle
       </h1>
       <div className="imgBox" style={{ background: "none" }}>
-        <img
-          src="../public/assets/elemental-triangle.png"
-          alt="Elemental Triangle Image"
-        />
+        <img src={elementalTriangle} alt="Elemental Triangle Image" />
       </div>
       <p className="pAbout">
         At the beginning of nearly every Pokemon game, the player's first
@@ -48,7 +47,7 @@ export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
         in total? Each with their own list of strengths and weaknesses.
       </p>
       <div className="imgBox">
-        <img src="../public/assets/type-chart.webp" alt="Pokemon Type Chart" />
+        <img src={typeChart} alt="Pokemon Type Chart" />
       </div>
       <p className="pAbout">
         If you want to be the very best, like no one ever was, you'll need to

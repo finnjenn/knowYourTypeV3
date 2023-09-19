@@ -6,19 +6,19 @@ export default function Opponent({ oppTypes, MAX_OPP_TYPES }) {
         {oppTypes.length === MAX_OPP_TYPES ? (
           <img
             className="sprite"
-            src={`../public/assets/sprites/${oppTypes[0]}_${oppTypes[1]}.png`}
+            src={`/assets/sprites/${oppTypes[0]}_${oppTypes[1]}.png`}
             onError={(e) => {
               e.preventDefault();
-              e.target.src = "../public/assets/sprites/arceus.png";
+              e.target.src = "/assets/sprites/arceus.png";
             }}
           />
         ) : (
           <img
             className="sprite"
-            src={`../public/assets/sprites/${oppTypes[0]}_${oppTypes[0]}.png`}
+            src={`/assets/sprites/${oppTypes[0]}_${oppTypes[0]}.png`}
             onError={(e) => {
               e.preventDefault();
-              e.target.src = "../public/assets/sprites/arceus.png";
+              e.target.src = "/assets/sprites/arceus.png";
             }}
           />
         )}
