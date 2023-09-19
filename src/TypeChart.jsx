@@ -1,5 +1,3 @@
-import { allTypes, typeTable } from "./typeData";
-import { useEffect } from "react";
 export default function TypeChart({
   type,
   superEff,
@@ -20,7 +18,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`src/assets/icons/${type}.png`}
+                src={`../public/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -34,7 +32,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`src/assets/icons/${type}.png`}
+                src={`../public/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -48,7 +46,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`src/assets/icons/${type}.png`}
+                src={`../public/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -62,7 +60,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`src/assets/icons/${type}.png`}
+                src={`../public/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -76,7 +74,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`src/assets/icons/${type}.png`}
+                src={`../public/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />
@@ -90,7 +88,7 @@ export default function TypeChart({
               <img
                 key={type}
                 className="typeChartIcon"
-                src={`src/assets/icons/${type}.png`}
+                src={`../public/assets/icons/${type}.png`}
                 alt={type}
                 title={type}
               />

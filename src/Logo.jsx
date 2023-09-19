@@ -1,4 +1,4 @@
-import logo from "./assets/knowyourtype.png";
+import logo from "../public/assets/knowyourtype.png";
 export default function Logo({ toAbout }) {
   return (
     <header>

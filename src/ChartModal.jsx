@@ -54,7 +54,7 @@ export default function ChartModal({ closeDialog, dialogRef }) {
                 >
                   <img
                     className="chartIcon"
-                    src={`src/assets/icons/${type}.png`}
+                    src={`../public/assets/icons/${type}.png`}
                     alt={type}
                     title={type}
                   />
@@ -300,7 +300,7 @@ export default function ChartModal({ closeDialog, dialogRef }) {
             setChartContent("main");
           }}
         >
-          <img className="unown-back" src="src/assets/unown.webp" />
+          <img className="unown-back" src="../public/assets/unown.webp" />
         </button>
       )}
     </dialog>

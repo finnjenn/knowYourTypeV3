@@ -50,7 +50,8 @@ export function Page() {
         onClick={() => setShowDialog(true)}
         title="Type Chart"
       >
-        <img src="src/assets/map.png" alt="" />
+        {/* <img src="src/assets/map.png" alt="" /> */}
+        <img src="public/assets/map.png" alt="" />
       </button>
       <ChartModal
         dialogRef={dialogRef}
