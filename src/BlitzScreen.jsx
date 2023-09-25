@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import "animate.css";
 import Countdown from "./Countdown";
 import Opponent from "./Opponent";
 import UserTypeBox from "./UserTypeBox";
@@ -16,6 +17,7 @@ export default function BlitzScreen({ toAbout }) {
   const [showDialog, setShowDialog] = useState(true);
   let dialogRef = useRef(null);
   let movesUsedRef = useRef(0);
+  let outputRef = useRef("Click");
   const timer = useTimer({
     expiryTimestamp: time.setSeconds(time.getSeconds() + TIMER_LENGTH),
     autoStart: false,
@@ -92,7 +94,10 @@ export default function BlitzScreen({ toAbout }) {
   }
   function handleMoveClicked(typeClicked) {
     movesUsedRef.current += 1;
-    setHealthbar(healthbar - calculateDamage(typeClicked));
+    let damage = calculateDamage(typeClicked);
+    outputRef.current = damage[1];
+    // setHealthbar(healthbar - calculateDamage(typeClicked));
+    setHealthbar(healthbar - damage[0]);
     setUserMoves(getUserMoves());
     let prevFighter = opponentTeam[0];
     let restOfTeam = opponentTeam.slice(1, 6);
@@ -122,12 +127,12 @@ export default function BlitzScreen({ toAbout }) {
   function calculateDamage(typeClicked) {
     let multiplier = calculateDamageMultiplier(typeClicked);
     let damage;
-    if (multiplier === 0) damage = 0;
-    if (multiplier === 0.25) damage = 5;
-    if (multiplier === 0.5) damage = 10;
-    if (multiplier === 1) damage = 20;
-    if (multiplier === 2) damage = 40;
-    if (multiplier === 4) damage = 75;
+    if (multiplier === 0) damage = [0, "No Effect"];
+    if (multiplier === 0.25) damage = [5, "Not Very Effective"];
+    if (multiplier === 0.5) damage = [10, "Not Very Effective"];
+    if (multiplier === 1) damage = [20, "Neutral"];
+    if (multiplier === 2) damage = [40, "Super-Effective"];
+    if (multiplier === 4) damage = [75, "Super-Effective"];
     if (damage > healthbar) damage = healthbar;
     return damage;
   }
@@ -140,6 +145,8 @@ export default function BlitzScreen({ toAbout }) {
     setOpponentTeam(getOpponentTeam());
     setHealthbar(OPPONENT_HEALTH);
     setShowDialog(false);
+    movesUsedRef.current = 0;
+    outputRef.current = "Click";
     const time = new Date();
     timer.restart(time.setSeconds(time.getSeconds() + TIMER_LENGTH), true);
   }
@@ -179,7 +186,13 @@ export default function BlitzScreen({ toAbout }) {
           <p>{healthbar}</p>
         </div>
       </div>
-      <h1>Your Moves</h1>
+      <h1 style={{ fontSize: "1.5em" }}>Your Moves</h1>
+      <p
+        className="blitzOutput"
+        style={outputRef.current === "Click" ? { color: "white" } : null}
+      >
+        {outputRef.current}
+      </p>
       <UserTypeBox
         userTypes={userMoves}
         handleMoveClicked={handleMoveClicked}
@@ -193,7 +206,9 @@ export default function BlitzScreen({ toAbout }) {
                 Time Elapsed: {TIMER_LENGTH - timer.seconds} seconds
               </p>
               <p className="white-text">Moves Used: {movesUsedRef.current}</p>
-              <p className="white-text">Health Remaining: {healthbar}</p>
+              <p className="white-text">
+                Health Remaining: {healthbar < 0 ? 0 : healthbar}
+              </p>
             </div>
             <button onClick={handleRestart}>Restart</button>
           </>

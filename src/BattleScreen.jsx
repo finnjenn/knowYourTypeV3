@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "animate.css";
 import Logo from "./Logo";
 import { allTypes, typeTable } from "./typeData";
 import UserTypeBox from "./UserTypeBox";

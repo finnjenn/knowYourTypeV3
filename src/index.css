@@ -201,7 +201,7 @@ h1 {
   transform: scale(1.1);
 }
 .spriteBox {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   border-radius: 2rem;
   background-image: url("./assets/battle-background.png");
   background-repeat: no-repeat;
@@ -209,8 +209,7 @@ h1 {
   background-position: center;
   display: flex;
   justify-content: center;
-  margin: 1rem 20%;
-  padding: 1rem 0;
+  margin: 1rem 15%;
   box-shadow: 5px 5px 5px rgb(91, 91, 91);
 }
 .sprite {
@@ -222,9 +221,9 @@ h1 {
   justify-content: space-evenly;
 }
 .oppTypeBox span {
-  padding: 1rem 3rem;
+  padding: 0.5rem 2rem;
   border-radius: 1rem;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .userTypeBox {
   /* border: 1px solid black; */
@@ -238,7 +237,7 @@ h1 {
   border: none;
   padding: 1.5rem 0;
   border-radius: 1rem;
-  margin: 2% 2%;
+  margin: 1% 1%;
   font-size: 1.2em;
   cursor: pointer;
   transition: 200ms ease-in-out;
@@ -336,6 +335,10 @@ h1 {
   letter-spacing: 0.2em;
 }
 .blitzDialog {
+  text-align: center;
+}
+.blitzOutput {
+  font-weight: bold;
   text-align: center;
 }
 .Normal {

@@ -11,7 +11,7 @@ export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
           Blitz Mode
         </button>
         <button className="mode" onClick={toFreePlaySettings}>
-          FreePlay
+          Practice
         </button>
       </div>
       <h1>
@@ -25,7 +25,7 @@ export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
       </div>
       <p className="pAbout">
         At the beginning of nearly every Pokemon game, the player's first
-        involement with type matchups is the
+        involvement with type matchups is the
         <span style={{ color: "#f08030" }}> Fire</span>{" "}
         <span style={{ color: "#6890f0" }}>Water</span>{" "}
         <span style={{ color: "#78c850" }}>Grass</span> Elemental Triangle.
@@ -40,7 +40,11 @@ export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
         told you there are{" "}
         <span
           onClick={() => setShowDialog(true)}
-          style={{ color: "#ffd100", cursor: "pointer" }}
+          style={{
+            color: "#ffd100",
+            cursor: "pointer",
+            textShadow: "2px 2px 2px black",
+          }}
         >
           18 different types
         </span>{" "}
@@ -59,10 +63,7 @@ export default function About({ toFreePlaySettings, toBlitz, setShowDialog }) {
         chart.
       </p>
       <h1>Two Modes - Endless Possibilities</h1>
-      <div className="modeInfoBox">
-        <button>Blitz Mode</button>
-        <button>Free Play</button>
-      </div>
+      <div className="modeInfoBox"></div>
     </>
   );
 }

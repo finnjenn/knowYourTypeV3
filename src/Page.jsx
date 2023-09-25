@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "animate.css";
 import About from "./About";
 import FreePlaySettings from "./FreePlaySettings";
 import BattleScreen from "./BattleScreen";
